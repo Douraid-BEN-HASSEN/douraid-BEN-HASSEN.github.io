@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+---
+
+<BaseLayout title = "Projets" sideBarActiveItemID="projects">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Projets IA</div>
+  </div>
+
+  <HorizontalCard
+    title="License_plate_reader"
+    img="/projet_1.jpg"
+    desc="Prototype IA de reconnaissance de plaque d'immatriculation pour la solution Self-Car."
+    url="https://github.com/Douraid-BEN-HASSEN/intelligence_artificielle/tree/main/License_plate_reader"
+    badge="NEW"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="biodiversarium_poisson_clown"
+    img="/projet_2.jpg"
+    desc="POC (proof of concept) de reconnaissance individuelle de poisson clown par IA pour le laboratoire biodiversarium."
+    url="https://github.com/Douraid-BEN-HASSEN/biodiversarium_poisson_clown"
+  />
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Projets Secondaires</div>
+  </div>
+
+  <HorizontalCard
+    title="ia-biodiversarium-banyuls-web-appli"
+    img="/projet_3.jpg"
+    desc="Interface web responsive qui permet de réaliser deux fonctionnalités : Prendre une photo une / des espèces ( végétaux et animaux) , interoger l'intelligence artificielle via une API, et obtenir l'identification des espèces sur la photo. Par la suite, l'interface proposera à l'utilisateur une liste sous forme de grilles de toutes les espèces détectées. L'utilisateur pourra cliquer sur l'une des espèces afin d'afficher une modale contenant une documentation de l'espèce sélectionnée. Sans prendre de photos, l'utilisateur peut faire une recherche parmi toutes les espèces identifiables, et accéder à une page de documentation sur l'espèce recherchée."
+    url="https://github.com/Douraid-BEN-HASSEN/ia-biodiversarium-banyuls-web-appli"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="AR course"
+    img="/projet_4.jpg"
+    desc="Jeu multijoueur de course automobile inspiré du jeu micro-machines."
+    url="https://github.com/Douraid-BEN-HASSEN/ar_course"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Eco-BattleBot 2023"
+    img="/projet_5.jpg"
+    desc="Tournoi de robots de combat, organisé par l'Institut Méditerranéen d'Études et Recherche en Informatique et Robotique. Le tournoi met en compétition des robots de différentes catégories en fonction de leur poids et de leurs dimensions. Les participants doivent utiliser du matériel récupéré ainsi que des pièces fournies par l'institut. Les robots doivent être équipés d'un arrêt d'urgence accessible et être contrôlés par Wi-Fi, Bluetooth, ou nRF24, avec des contrôleurs spécifiques. Certaines armes sont interdites, et les combats ont lieu dans une arène carrée, protégée par du verre acrylique et du grillage."
+    url="https://github.com/Douraid-BEN-HASSEN/battlebot"
+  />
+</BaseLayout>

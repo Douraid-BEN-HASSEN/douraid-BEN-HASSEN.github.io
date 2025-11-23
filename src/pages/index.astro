@@ -1,18 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
-import { getCollection } from "astro:content";
-
 ---
 
 <BaseLayout sideBarActiveItemID="Accueil">
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hello 👋</div>
-    <div class="text-5xl font-bold">Je suis Douraïd BEN HASSEN</div>
-    <div class="text-3xl py-3 font-bold">Data Scientist & Développeur Full-Stack 🚀🤖</div>
+    <div class="text-5xl font-bold">I am Douraïd BEN HASSEN</div>
+    <div class="text-3xl py-3 font-bold">Data Scientist - Computer Vision</div>
     <div class="py-2">
       <text class="text-lg">
-        Data scientist expérimenté en vision par ordinateur, je maîtrise tout le cycle de vie des modèles – de la recherche algorithmique au déploiement en production – pour des applications industrielles à fort impact.
+        Experienced data scientist specialized in computer vision, I master the entire model lifecycle – from algorithmic research to production deployment – for high-impact industrial applications.
       </text>
     </div>
   </div>
@@ -22,45 +20,45 @@ import { getCollection } from "astro:content";
   </div>
 
   <HorizontalCard
-    title="License Plate Recognition with PP-OCRv5 (PaddleOCR)"
-    img="/license_plate_recognition.png"
-    desc="Developed a real-time license plate recognition system using PP-OCRv5 by PaddleOCR, achieving high accuracy and efficiency. Integrated the model into a custom pipeline for automatic detection and recognition of vehicle license plates."
-    url="https://github.com/Douraid-BEN-HASSEN/license_plate_recognition"
-    badge="IA"
+    title="Blood cell analysis"
+    img="/blood_cell_analysis.png"
+    desc="A comprehensive blood cell analysis system combining state-of-the-art object detection (YOLOv12) and deep learning classification (EfficientNet-B0) for automated hematology analysis. This system can detect and classify white blood cells (WBCs), red blood cells (RBCs), and platelets from microscopy images."
+    url="https://github.com/Douraid-BEN-HASSEN/blood_cell_analysis"
+    badge="AI"
   />
 
   <HorizontalCard
-    title="Fish recognition"
-    img="/fish_recognition_project.png"
-    desc="Résolution d'un défi complexe : reconnaître individuellement des poissons quasiment identiques (taille, couleur, forme) dans un aquarium en mouvement, en combinant computer vision et deep learning."
-    url="https://github.com/Douraid-BEN-HASSEN/fish_recognition"
-    badge="IA"
+    title="Bacterial species classification"
+    img="/bacterial_species_classification.png"
+    desc="An advanced bacterial species classification system using transfer learning and computer vision. This project leverages ResNet50 with progressive unfreezing to identify 33 bacterial species from microscopy images, achieving 98.48% validation accuracy and 96.10% test accuracy on the DIBaS dataset."
+    url="https://github.com/Douraid-BEN-HASSEN/bacterial_species_classification"
+    badge="AI"
   />
 
   <HorizontalCard
-    title="Physical_facial_tracking"
-    img="/Physical_facial_tracking.png"
-    desc="Suit le visage d'une personne dans une vidéo en temps réel. La caméra s'ajuste automatiquement pour maintenir le visage de la personne au centre du cadre."
-    url="https://github.com/Douraid-BEN-HASSEN/physical_facial_tracking"
-    badge="IA"
+    title="Facial expression recognition"
+    img="/facial-expression-recognition.png"
+    desc="A comprehensive comparison of deep learning architectures for facial expression recognition on the FER2013 dataset. This project explores four different approaches and achieves 69.99% accuracy with EfficientNet-B0."
+    url="https://github.com/Douraid-BEN-HASSEN/facial-expression-recognition"
+    badge="AI"
   />
 
   <div class="divider my-0"></div>
 
   <HorizontalCard
-    title="License_plate_reader"
-    img="/projet_1.jpg"
-    desc="Prototype IA de reconnaissance de plaque d'immatriculation pour la solution Self-Car."
-    url="https://github.com/Douraid-BEN-HASSEN/intelligence_artificielle/tree/main/License_plate_reader"
-    badge="IA"
+    title="Pill defect detection"
+    img="/pill_defect_detection.png"
+    desc="An advanced anomaly detection system for pharmaceutical quality control using deep learning. This project leverages a Convolutional Autoencoder with hybrid perceptual loss to identify defective pills in industrial vision applications."
+    url="https://github.com/Douraid-BEN-HASSEN/pill_defect_detection"
+    badge="AI"
   />
 
   <HorizontalCard
-    title="biodiversarium_poisson_clown"
-    img="/projet_2.jpg"
-    desc="POC (proof of concept) de reconnaissance individuelle de poisson clown par IA pour le laboratoire biodiversarium."
-    url="https://github.com/Douraid-BEN-HASSEN/biodiversarium_poisson_clown"
-    badge="IA"
+    title="Fish recognition"
+    img="/fish_recognition_project.png"
+    desc="Complex challenge solved: individually recognizing nearly identical fish (size, color, shape) in a moving aquarium by combining computer vision and deep learning."
+    url="https://github.com/Douraid-BEN-HASSEN/fish_recognition"
+    badge="AI"
   />
 
 </BaseLayout>

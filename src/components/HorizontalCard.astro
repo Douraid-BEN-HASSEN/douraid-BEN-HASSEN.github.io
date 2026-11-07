@@ -1,23 +1,46 @@
 ---
-const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+const { title, img, images, desc, url, badge, tags, target = "_blank" } = Astro.props;
 import { Image } from "@astrojs/image/components";
 ---
 
 <div
-  class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
+  class="card card-hover rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
 >
-  <a href={url} target={target}>
+  <a href={url || (images && images[0])} target={target}>
     <div class="hero-content flex-col md:flex-row">
       {
-        img && (
-          <Image
-            src={img}
-            aspectRatio="16:9"
-            width={750}
-            format="webp"
-            alt={title}
-            class="max-w-full md:max-w-[13rem] rounded-lg"
-          />
+        images ? (
+          <div class="max-w-full md:max-w-[24rem] rounded-lg overflow-hidden card-carousel">
+            <div
+              class="card-carousel-track"
+              style={`--slides: ${images.length}; width: ${images.length * 100}%;`}
+            >
+              {
+                images.map((src) => (
+                  <Image
+                    src={src}
+                    width={768}
+                    height={432}
+                    fit="cover"
+                    format="webp"
+                    alt={`${title} screenshot`}
+                    class="card-carousel-item"
+                  />
+                ))
+              }
+            </div>
+          </div>
+        ) : (
+          img && (
+            <Image
+              src={img}
+              aspectRatio="16:9"
+              width={768}
+              format="webp"
+              alt={title}
+              class="max-w-full md:max-w-[24rem] rounded-lg"
+            />
+          )
         )
       }
       <div class="grow w-full">
@@ -36,3 +59,34 @@ import { Image } from "@astrojs/image/components";
     </div>
   </a>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".card-hover").forEach((card) => {
+      const track = card.querySelector(".card-carousel-track");
+      if (!track) return;
+      const n = track.children.length;
+      if (n < 2) return;
+      const step = 100 / n;
+      let i = 0;
+      let timer = null;
+      const start = () => {
+        if (timer !== null || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        i = 0;
+        timer = setInterval(() => {
+          i = (i + 1) % n;
+          track.style.transform = `translateX(${-i * step}%)`;
+        }, 1000);
+      };
+      const stop = () => {
+        if (timer === null) return;
+        clearInterval(timer);
+        timer = null;
+        i = 0;
+        track.style.transform = "";
+      };
+      card.addEventListener("mouseenter", start);
+      card.addEventListener("mouseleave", stop);
+    });
+  });
+</script>

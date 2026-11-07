@@ -1,3 +1,18 @@
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
 }
+
+/* HorizontalCard screenshot carousel */
+.card-carousel-track {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.7s ease-in-out;
+    will-change: transform;
+}
+.card-carousel-item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: calc(100% / var(--slides));
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}

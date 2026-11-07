@@ -9,24 +9,87 @@ import HorizontalCard from "../components/HorizontalCard.astro";
   </div>
 
   <HorizontalCard
-    title="Customs Assistant"
-    img="/customs_assitant_agents.png"
+    title="AI-Powered Narrative Compression System Transforming Long-Form Content into High-Retention Viral Content"
+    img="/projects/tiktok/tiktok.png"
+    desc="Designed and productionized agentic workflows that transform long-form content into high-retention short-form content. The system automatically summarizes the narrative, generates captivating voice narration, and creates visual scenes that bring key moments to life. Result: +10,000 subscribers in 2 months."
+    badge="AI"
+  />
+
+  <HorizontalCard
+    title="AI-powered visual enhancement & content generation for second-hand fashion marketplace"
+    images={[]}
+    desc="Designed and productionized agentic workflows that transform basic product photos into high-converting visuals while preserving strong realism with the original item. The system also auto-generates titles and full product descriptions. Results: +20% sales and +150% product views."
+    badge="AI"
+  />
+
+  <HorizontalCard
+    title="Customs Operations Automation"
+    images={[
+      "/projects/customs/main_page.png",
+      "/projects/customs/select_new_action_menu.png",
+      "/projects/customs/action_running.png",
+      "/projects/customs/action_done.png",
+      "/projects/customs/action_data_extraction.png",
+    ]}
     desc="AI Multi-Agent Platform for Customs Operations Automation. Intelligent assistant for shipment qualification, customs document generation, and workflow orchestration across operational customs tasks."
-    url="/customs_assistant.pdf"
     badge="AI"
   />
 
   <HorizontalCard
     title="Fides AI"
-    img="/fides_ai.png"
+    images={[
+      "/projects/fides/action_selection.png",
+      "/projects/fides/action_1_start.png",
+      "/projects/fides/action_1_end.png",
+      "/projects/fides/action_2_start.png",
+      "/projects/fides/action_2_available_templates.png",
+      "/projects/fides/action_2_end.png",
+      "/projects/fides/action_3_start.png",
+      "/projects/fides/action_3_end.png",
+      "/projects/fides/custom_step_instructions.png",
+      "/projects/fides/configuration_taux_horaire.png",
+      "/projects/fides/edition_rapport.png",
+    ]}
     desc="Multi-Agent System for Judicial Case Processing. AI-powered platform designed to qualify judicial files, automate procedural document production, and structure case workflows for legal operations."
-    url="/POC_FIDES.pdf"
     badge="AI"
   />
 
   <HorizontalCard
+    title="AI Platform"
+    images={[
+      "/projects/aiplateform/main_page.png",
+      "/projects/aiplateform/admin_panel_ai_config.png",
+      "/projects/aiplateform/admin_panel_rag_indexation_1.png",
+      "/projects/aiplateform/admin_panel_rag_indexation_2.png",
+      "/projects/aiplateform/admin_panel_rag_request_test.png",
+      "/projects/aiplateform/ai_agents_panel.png",
+      "/projects/aiplateform/ai_agent_crews_panel.png",
+      "/projects/aiplateform/ai_agent_crew_execution_mode.png",
+      "/projects/aiplateform/ai_agent_tools.png",
+      "/projects/aiplateform/chat_normal.png",
+      "/projects/aiplateform/chat_with_ai_agent_1.png",
+      "/projects/aiplateform/chat_with_ai_agent_2.png",
+      "/projects/aiplateform/chat_with_image_generation_running.png",
+      "/projects/aiplateform/chat_with_rag.png",
+      "/projects/aiplateform/create_agent_form.png",
+      "/projects/aiplateform/create_ai_agent_crew_form_1.png",
+      "/projects/aiplateform/create_ai_agent_crew_form_2.png",
+      "/projects/aiplateform/create_ai_agent_crew_form_3.png",
+      "/projects/aiplateform/rag_query_type.png",
+    ]}
+    desc="Self-hosted AI platform running entirely on your own infrastructure (servers or GPU-equipped machines). A single interface combining: conversational chat over local LLMs (Gemma and others via Ollama), hybrid RAG retrieval (vector + full-text + RRF fusion), Flux.1-dev image generation, configurable specialized AI agents with tools (web search, code execution, data analysis), collaborative AI Crews in sequential or hierarchical mode, and a granular admin panel for users, knowledge bases, and multi-GPU allocation."
+    badge="AI"
+  />
+
+  <div class="divider my-4"></div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Side Projects</div>
+  </div>
+
+  <HorizontalCard
     title="ASL Alphabet recognition"
-    img="/asl_alphabet_recognition.png"
+    img="/projects/asl_alphabet_recognition/asl_alphabet_recognition.png"
     desc="Hand landmark-based ASL fingerspelling recognition with 42D normalized features. MLP/DeepMLP/CNN architectures evaluated. K-Means & DBSCAN clustering for feature space analysis. Real-time webcam inference at 98%+ accuracy."
     url="https://github.com/Douraid-BEN-HASSEN/asl_alphabet_recognition"
     badge="AI"
@@ -34,7 +97,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
   <HorizontalCard
     title="Blood cell analysis"
-    img="/blood_cell_analysis.png"
+    img="/projects/blood_cell_analysis/blood_cell_analysis.png"
     desc="A comprehensive blood cell analysis system combining state-of-the-art object detection (YOLOv12) and deep learning classification (EfficientNet-B0) for automated hematology analysis. This system can detect and classify white blood cells (WBCs), red blood cells (RBCs), and platelets from microscopy images."
     url="https://github.com/Douraid-BEN-HASSEN/blood_cell_analysis"
     badge="AI"
@@ -42,7 +105,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
   <HorizontalCard
     title="Bacterial species classification"
-    img="/bacterial_species_classification.png"
+    img="/projects/bacterial_species_classification/bacterial_species_classification.png"
     desc="An advanced bacterial species classification system using transfer learning and computer vision. This project leverages ResNet50 with progressive unfreezing to identify 33 bacterial species from microscopy images, achieving 98.48% validation accuracy and 96.10% test accuracy on the DIBaS dataset."
     url="https://github.com/Douraid-BEN-HASSEN/bacterial_species_classification"
     badge="AI"
@@ -50,7 +113,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
   <HorizontalCard
     title="Facial expression recognition"
-    img="/facial-expression-recognition.png"
+    img="/projects/facial-expression-recognition/facial-expression-recognition.png"
     desc="A comprehensive comparison of deep learning architectures for facial expression recognition on the FER2013 dataset. This project explores four different approaches and achieves 69.99% accuracy with EfficientNet-B0."
     url="https://github.com/Douraid-BEN-HASSEN/facial-expression-recognition"
     badge="AI"
@@ -58,7 +121,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
   <HorizontalCard
     title="Pill defect detection"
-    img="/pill_defect_detection.png"
+    img="/projects/pill_defect_detection/pill_defect_detection.png"
     desc="An advanced anomaly detection system for pharmaceutical quality control using deep learning. This project leverages a Convolutional Autoencoder with hybrid perceptual loss to identify defective pills in industrial vision applications."
     url="https://github.com/Douraid-BEN-HASSEN/pill_defect_detection"
     badge="AI"
@@ -66,7 +129,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
   <HorizontalCard
     title="License Plate Recognition using PP-OCRv5"
-    img="/license_plate_recognition.png"
+    img="/projects/license_plate_recognition/license_plate_recognition.png"
     desc="Developed a real-time license plate recognition system using PP-OCRv5 by PaddleOCR, achieving high accuracy and efficiency. Integrated the model into a custom pipeline for automatic detection and recognition of vehicle license plates."
     url="https://github.com/Douraid-BEN-HASSEN/license_plate_recognition"
     badge="AI"
@@ -74,7 +137,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
   <HorizontalCard
     title="Fish recognition"
-    img="/fish_recognition_project.png"
+    img="/projects/fish_recognition_project/fish_recognition_project.png"
     desc="Complex challenge solved: individually recognizing nearly identical fish (size, color, shape) in a moving aquarium by combining computer vision and deep learning."
     url="https://github.com/Douraid-BEN-HASSEN/fish_recognition"
     badge="AI"

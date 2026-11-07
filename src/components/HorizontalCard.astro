@@ -1,12 +1,12 @@
 ---
-const { title, img, images, desc, url, badge, tags, target = "_blank" } = Astro.props;
+const { title, img, images, desc, url, badge, tags, results = null, target = "_blank" } = Astro.props;
 import { Image } from "@astrojs/image/components";
 ---
 
 <div
   class="card card-hover rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
 >
-  <a href={url || (images && images[0])} target={target}>
+  <a href={url} target={target}>
     <div class="hero-content flex-col md:flex-row">
       {
         images ? (
@@ -49,6 +49,7 @@ import { Image } from "@astrojs/image/components";
           {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
         </h1>
         <p class="py-1 text-1xl">{desc}</p>
+        {results && <p class="py-1 text-lg font-semibold text-primary">{"Results: " + results}</p>}
         <div class="card-actions justify-end">
           {
             tags &&

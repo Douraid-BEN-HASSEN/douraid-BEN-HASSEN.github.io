@@ -7,20 +7,16 @@ import HorizontalCard from "../components/HorizontalCard.astro";
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hello 👋</div>
     <div class="text-5xl font-bold">I am Douraïd BEN HASSEN</div>
-    <div class="text-3xl py-3 font-bold">AI Engineer | Generative AI & Agent Systems | Computer Vision | Azure Certified DP-100, AI-102</div>
+    <div class="text-3xl py-3 font-bold">Agentic Systems Engineer | Production Runtime & Orchestration | Azure Certified DP-100, AI-102</div>
     <div class="py-2">
       <text class="text-lg">
-        As an AI engineer specializing in generative AI and agent systems, I design and deploy end-to-end AI platforms to production.
+        I design and ship multi-agent systems with production-grade orchestration, evaluation-gated CI/CD, and cost-aware LLM pipelines on Azure
         <br><br>
-        My expertise covers the entire AI lifecycle: multi-agent architecture, RAG, LLM pipelines, prompt engineering, API integration, and MLOps on Azure.
+        My background in ML and industrial MLOps shapes how I approach agent reliability and runtime engineering.
         <br><br>
-        I have a strong background in Computer Vision and Deep Learning (detection, classification, OCR, anomaly detection, tracking) on ​​robust, industrialized systems.
-        <br><br>
-        🤖 Areas: Generative AI, LLM, Agent Systems, RAG, Computer Vision
+        Stack : Python, LangChain, LangGraph, LangSmith, LangFuse, Azure, Docker, CI/CD
         <br>
-        ☁️ Stack: Python, FastAPI, Azure OpenAI, React/TypeScript, Docker, CI/CD
-        <br>
-        🚀 From Architecture to Production
+        From Architecture to Production
       </text>
     </div>
   </div>
@@ -30,7 +26,32 @@ import HorizontalCard from "../components/HorizontalCard.astro";
   </div>
 
   <HorizontalCard
-    title="Customs Assistant"
+    title="AI-Powered Narrative Compression System Transforming Long-Form Content into High-Retention Viral Content"
+    img="/projects/tiktok/tiktok.png"
+    desc="Designed and productionized agentic workflows that transform long-form content into high-retention short-form content. The system automatically summarizes the narrative, generates captivating voice narration, and creates visual scenes that bring key moments to life."
+    results="+10,000 subscribers in 2 months."
+    badge="AI"
+  />
+
+  <HorizontalCard
+    title="AI-powered visual enhancement & content generation for second-hand fashion marketplace"
+    images={[
+      "/projects/vinted/new_article_1.png",
+      "/projects/vinted/new_article_2.png",
+      "/projects/vinted/new_article_3.png",
+      "/projects/vinted/new_article_4.png",
+      "/projects/vinted/article_detail_1.png",
+      "/projects/vinted/article_detail_2.png",
+      "/projects/vinted/article_list_1.png",
+      "/projects/vinted/article_list_2.png"
+    ]}
+    desc="Designed and productionized agentic workflows that transform basic product photos into high-converting visuals while preserving strong realism with the original item. The system also auto-generates titles and full product descriptions."
+    results="+20% sales and +150% product views."
+    badge="AI"
+  />
+
+  <HorizontalCard
+    title="Customs Operations Automation"
     images={[
       "/projects/customs/main_page.png",
       "/projects/customs/select_new_action_menu.png",
@@ -39,11 +60,12 @@ import HorizontalCard from "../components/HorizontalCard.astro";
       "/projects/customs/action_data_extraction.png",
     ]}
     desc="AI Multi-Agent Platform for Customs Operations Automation. Intelligent assistant for shipment qualification, customs document generation, and workflow orchestration across operational customs tasks."
+    results="High-volume processing speedup and error reduction for customs operations"
     badge="AI"
   />
 
   <HorizontalCard
-    title="Fides AI"
+    title="Multi-Agent System for Judicial Case Processing"
     images={[
       "/projects/fides/action_selection.png",
       "/projects/fides/action_1_start.png",
@@ -57,13 +79,15 @@ import HorizontalCard from "../components/HorizontalCard.astro";
       "/projects/fides/configuration_taux_horaire.png",
       "/projects/fides/edition_rapport.png",
     ]}
-    desc="Multi-Agent System for Judicial Case Processing. AI-powered platform designed to qualify judicial files, automate procedural document production, and structure case workflows for legal operations."
+    desc="AI-powered platform that classifies judicial files, automates procedural document production, and structures case workflows."
+    results="Cutting manual workload from several weeks to 30 minutes per case."
     badge="AI"
   />
 
   <HorizontalCard
     title="AI Platform"
     images={[
+      "/projects/aiplateform/main_page.png",
       "/projects/aiplateform/admin_panel_ai_config.png",
       "/projects/aiplateform/admin_panel_rag_indexation_1.png",
       "/projects/aiplateform/admin_panel_rag_indexation_2.png",
@@ -81,7 +105,6 @@ import HorizontalCard from "../components/HorizontalCard.astro";
       "/projects/aiplateform/create_ai_agent_crew_form_1.png",
       "/projects/aiplateform/create_ai_agent_crew_form_2.png",
       "/projects/aiplateform/create_ai_agent_crew_form_3.png",
-      "/projects/aiplateform/main_page.png",
       "/projects/aiplateform/rag_query_type.png",
     ]}
     desc="Self-hosted AI platform running entirely on your own infrastructure (servers or GPU-equipped machines). A single interface combining: conversational chat over local LLMs (Gemma and others via Ollama), hybrid RAG retrieval (vector + full-text + RRF fusion), Flux.1-dev image generation, configurable specialized AI agents with tools (web search, code execution, data analysis), collaborative AI Crews in sequential or hierarchical mode, and a granular admin panel for users, knowledge bases, and multi-GPU allocation."
@@ -91,14 +114,15 @@ import HorizontalCard from "../components/HorizontalCard.astro";
   <div class="divider my-4"></div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">Side Projects</div>
+    <div class="text-3xl w-full font-bold mb-5">Side Projects</div>
   </div>
 
   <HorizontalCard
     title="ASL Alphabet recognition"
     img="/projects/asl_alphabet_recognition/asl_alphabet_recognition.png"
-    desc="Hand landmark-based ASL fingerspelling recognition with 42D normalized features. MLP/DeepMLP/CNN architectures evaluated. K-Means & DBSCAN clustering for feature space analysis. Real-time webcam inference at 98%+ accuracy."
+    desc="Hand landmark-based ASL fingerspelling recognition with 42D normalized features. MLP/DeepMLP/CNN architectures evaluated. K-Means & DBSCAN clustering for feature space analysis."
     url="https://github.com/Douraid-BEN-HASSEN/asl_alphabet_recognition"
+    results="Real-time webcam inference at 98%+ accuracy."
     badge="AI"
   />
 
@@ -113,16 +137,18 @@ import HorizontalCard from "../components/HorizontalCard.astro";
   <HorizontalCard
     title="Bacterial species classification"
     img="/projects/bacterial_species_classification/bacterial_species_classification.png"
-    desc="An advanced bacterial species classification system using transfer learning and computer vision. This project leverages ResNet50 with progressive unfreezing to identify 33 bacterial species from microscopy images, achieving 98.48% validation accuracy and 96.10% test accuracy on the DIBaS dataset."
+    desc="An advanced bacterial species classification system using transfer learning and computer vision. This project leverages ResNet50 with progressive unfreezing to identify 33 bacterial species from microscopy images."
     url="https://github.com/Douraid-BEN-HASSEN/bacterial_species_classification"
+    results="Achieved 98.48% validation accuracy and 96.10% test accuracy on the DIBaS dataset."
     badge="AI"
   />
 
   <HorizontalCard
     title="Facial expression recognition"
     img="/projects/facial-expression-recognition/facial-expression-recognition.png"
-    desc="A comprehensive comparison of deep learning architectures for facial expression recognition on the FER2013 dataset. This project explores four different approaches and achieves 69.99% accuracy with EfficientNet-B0."
+    desc="A comprehensive comparison of deep learning architectures for facial expression recognition on the FER2013 dataset. This project explores four different approaches."
     url="https://github.com/Douraid-BEN-HASSEN/facial-expression-recognition"
+    results="Achieved 69.99% accuracy with EfficientNet-B0."
     badge="AI"
   />
 
@@ -131,14 +157,6 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     img="/projects/pill_defect_detection/pill_defect_detection.png"
     desc="An advanced anomaly detection system for pharmaceutical quality control using deep learning. This project leverages a Convolutional Autoencoder with hybrid perceptual loss to identify defective pills in industrial vision applications."
     url="https://github.com/Douraid-BEN-HASSEN/pill_defect_detection"
-    badge="AI"
-  />
-
-  <HorizontalCard
-    title="License Plate Recognition using PP-OCRv5"
-    img="/projects/license_plate_recognition/license_plate_recognition.png"
-    desc="Developed a real-time license plate recognition system using PP-OCRv5 by PaddleOCR, achieving high accuracy and efficiency. Integrated the model into a custom pipeline for automatic detection and recognition of vehicle license plates."
-    url="https://github.com/Douraid-BEN-HASSEN/license_plate_recognition"
     badge="AI"
   />
 

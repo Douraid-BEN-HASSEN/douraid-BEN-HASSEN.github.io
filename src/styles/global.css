@@ -16,3 +16,7 @@
     aspect-ratio: 16 / 9;
     object-fit: cover;
 }
+/* Portrait (phone) screenshots in an all-portrait carousel keep their natural ratio */
+.card-carousel-item-portrait {
+    aspect-ratio: auto;
+}

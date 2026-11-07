@@ -1,6 +1,21 @@
 ---
 const { title, img, images, desc, url, badge, tags, results = null, target = "_blank" } = Astro.props;
 import { Image } from "@astrojs/image/components";
+import sharp from "sharp";
+
+const slides = images
+  ? await Promise.all(
+      images.map(async (src) => {
+        try {
+          const info = await sharp(`./public${src}`).metadata();
+          return { src, width: info.width, height: info.height, portrait: info.height > info.width };
+        } catch {
+          return { src, width: 16, height: 9, portrait: false };
+        }
+      })
+    )
+  : [];
+const allPortrait = slides.length > 0 && slides.every((s) => s.portrait);
 ---
 
 <div
@@ -10,22 +25,49 @@ import { Image } from "@astrojs/image/components";
     <div class="hero-content flex-col md:flex-row">
       {
         images ? (
-          <div class="max-w-full md:max-w-[24rem] rounded-lg overflow-hidden card-carousel">
+          <div
+            class:list={[
+              "rounded-lg overflow-hidden card-carousel",
+              allPortrait ? "max-w-[14rem] md:max-w-[14rem] mx-auto" : "max-w-full md:max-w-[24rem]",
+            ]}
+          >
             <div
               class="card-carousel-track"
-              style={`--slides: ${images.length}; width: ${images.length * 100}%;`}
+              style={`--slides: ${slides.length}; width: ${slides.length * 100}%;`}
             >
               {
-                images.map((src) => (
-                  <Image
-                    src={src}
-                    width={768}
-                    height={432}
-                    fit="cover"
-                    format="webp"
-                    alt={`${title} screenshot`}
-                    class="card-carousel-item"
-                  />
+                slides.map((s) => (
+                  s.portrait && allPortrait ? (
+                    <Image
+                      src={s.src}
+                      width={480}
+                      height={Math.round((480 * s.height) / s.width)}
+                      fit="cover"
+                      format="webp"
+                      alt={`${title} screenshot`}
+                      class="card-carousel-item card-carousel-item-portrait"
+                    />
+                  ) : s.portrait ? (
+                    <Image
+                      src={s.src}
+                      width={Math.round((432 * s.width) / s.height)}
+                      height={432}
+                      fit="contain"
+                      format="webp"
+                      alt={`${title} screenshot`}
+                      class="card-carousel-item"
+                    />
+                  ) : (
+                    <Image
+                      src={s.src}
+                      width={768}
+                      height={432}
+                      fit="cover"
+                      format="webp"
+                      alt={`${title} screenshot`}
+                      class="card-carousel-item"
+                    />
+                  )
                 ))
               }
             </div>
